@@ -6,7 +6,7 @@ export default mergeConfig(
   defineConfig({
     test: {
       globals: true,
-      include: ['test/**/*[!(.d)].ts'],
+      include: ['test/**/*.test.ts'],
     },
   })
 );
