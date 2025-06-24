@@ -7,6 +7,11 @@ export default mergeConfig(
     test: {
       globals: true,
       include: ['test/**/*.test.ts'],
+      coverage: {
+        provider: 'v8',
+        reporter: ['text', 'lcov', 'html'],
+        reportsDirectory: './coverage',
+      },
     },
   })
 );
