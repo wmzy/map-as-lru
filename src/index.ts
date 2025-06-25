@@ -35,12 +35,8 @@ export function peek<K, V>(cache: LRUCache<K, V>, key: K): V | undefined {
 }
 
 export function set<K, V>(cache: LRUCache<K, V>, key: K, value: V) {
-  if (cache.has(key)) {
-    reset(cache, key, value);
-  } else {
-    (cache as any).set(key, value);
-    if (cache.size > cache[capacitySymbol]) {
-      cache.delete(cache.keys().next().value!);
-    }
+  reset(cache, key, value);
+  if (cache.size > cache[capacitySymbol]) {
+    cache.delete(cache.keys().next().value!);
   }
 }

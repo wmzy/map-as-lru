@@ -24,6 +24,9 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint --fix src test",
     "test": "vitest",
+    "bench": "vitest bench",
+    "bench:quick": "vitest bench simple.bench.ts",
+    "bench:comparison": "vitest bench comparison.bench.ts",
     "start": "vitest watch"
   },
   "repository": {
@@ -68,8 +71,12 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.29.0",
+    "hashlru": "^2.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
+    "lru-cache": "^11.1.0",
+    "mnemonist": "^0.40.3",
+    "quick-lru": "^7.0.1",
     "tools-config": "^0.2.3",
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
